@@ -11,6 +11,7 @@
 		E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C4A2671DC1C000A89D9 /* ContentView.swift */; };
 		E3A64C4D2671DC1D000A89D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A64C4C2671DC1D000A89D9 /* Assets.xcassets */; };
 		E3A64C502671DC1D000A89D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A64C4F2671DC1D000A89D9 /* Preview Assets.xcassets */; };
+		E3A64C592671DEDE000A89D9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C582671DEDE000A89D9 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E3A64C4C2671DC1D000A89D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3A64C4F2671DC1D000A89D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3A64C512671DC1D000A89D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A64C582671DEDE000A89D9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		E3A64C472671DC1C000A89D9 /* Drachma */ = {
 			isa = PBXGroup;
 			children = (
+				E3A64C572671DECE000A89D9 /* Extensions */,
 				E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */,
 				E3A64C4A2671DC1C000A89D9 /* ContentView.swift */,
 				E3A64C4C2671DC1D000A89D9 /* Assets.xcassets */,
@@ -67,6 +70,14 @@
 				E3A64C4F2671DC1D000A89D9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E3A64C572671DECE000A89D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3A64C582671DEDE000A89D9 /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */,
 				E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */,
+				E3A64C592671DEDE000A89D9 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
