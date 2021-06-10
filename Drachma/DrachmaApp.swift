@@ -13,7 +13,7 @@ struct DrachmaApp: App {
         WindowGroup {
             NavigationView{
                 HomeView()
-                    .navigationBarHidden(true)
+                    .navigationBarHidden(true )
             }
         }
     }
