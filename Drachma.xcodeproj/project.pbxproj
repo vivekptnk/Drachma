@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3590FCD2673170B00BB61E8 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FCC2673170B00BB61E8 /* Double.swift */; };
+		E35FC4552672733200F9E92B /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FC4542672733200F9E92B /* CoinRowView.swift */; };
+		E35FC4572672741600F9E92B /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FC4562672741600F9E92B /* PreviewProvider.swift */; };
 		E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */; };
 		E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C4A2671DC1C000A89D9 /* ContentView.swift */; };
 		E3A64C4D2671DC1D000A89D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A64C4C2671DC1D000A89D9 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3590FCC2673170B00BB61E8 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		E35FC4542672733200F9E92B /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		E35FC4562672741600F9E92B /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		E3A64C452671DC1C000A89D9 /* Drachma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drachma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrachmaApp.swift; sourceTree = "<group>"; };
 		E3A64C4A2671DC1C000A89D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				E3A64C582671DEDE000A89D9 /* Color.swift */,
+				E35FC4562672741600F9E92B /* PreviewProvider.swift */,
+				E3590FCC2673170B00BB61E8 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				E3A64C5E2671E18F000A89D9 /* HomeView.swift */,
+				E35FC4542672733200F9E92B /* CoinRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,12 +226,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E35FC4552672733200F9E92B /* CoinRowView.swift in Sources */,
 				E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */,
 				E3A64C5F2671E18F000A89D9 /* HomeView.swift in Sources */,
 				E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */,
 				E3A64C632671E28E000A89D9 /* CircleButtonView.swift in Sources */,
 				E3A64C592671DEDE000A89D9 /* Color.swift in Sources */,
 				E3A64C652671E565000A89D9 /* CircleButtonAnimationView.swift in Sources */,
+				E35FC4572672741600F9E92B /* PreviewProvider.swift in Sources */,
+				E3590FCD2673170B00BB61E8 /* Double.swift in Sources */,
 				E3A64C682671E843000A89D9 /* Coin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -104,7 +104,7 @@ struct Coin: Identifiable, Codable {
     }
     
     var rank : Int {
-        return Int(market)
+        return Int(marketCapRank ?? 0)
     }
 }
 
