@@ -11,10 +11,13 @@ extension PreviewProvider{
     static var dev : DeveloperPreview {
         DeveloperPreview.instance
     }
+    
+    
 }
 
 class DeveloperPreview{
     static let instance = DeveloperPreview()
+    let homeVM = HomeViewModel()
     private init (){ }
     
     let coin = Coin(

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E3590FCD2673170B00BB61E8 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FCC2673170B00BB61E8 /* Double.swift */; };
+		E3590FCF2673AF5800BB61E8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FCE2673AF5800BB61E8 /* HomeViewModel.swift */; };
 		E35FC4552672733200F9E92B /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FC4542672733200F9E92B /* CoinRowView.swift */; };
 		E35FC4572672741600F9E92B /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35FC4562672741600F9E92B /* PreviewProvider.swift */; };
 		E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		E3590FCC2673170B00BB61E8 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		E3590FCE2673AF5800BB61E8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E35FC4542672733200F9E92B /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		E35FC4562672741600F9E92B /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		E3A64C452671DC1C000A89D9 /* Drachma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drachma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 		E3A64C5D2671E17E000A89D9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E3590FCE2673AF5800BB61E8 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E35FC4552672733200F9E92B /* CoinRowView.swift in Sources */,
+				E3590FCF2673AF5800BB61E8 /* HomeViewModel.swift in Sources */,
 				E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */,
 				E3A64C5F2671E18F000A89D9 /* HomeView.swift in Sources */,
 				E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */,
