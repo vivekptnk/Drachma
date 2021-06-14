@@ -27,11 +27,6 @@ class CoinDataService {
             }
             .receive(on: DispatchQueue.main)
             .decode(type: [Coin].self, decoder: JSONDecoder())
-            .sink { <#Subscribers.Completion<Error>#> in
-                <#code#>
-            } receiveValue: { <#[Coin]#> in
-                <#code#>
-            }
 
     }
 }
