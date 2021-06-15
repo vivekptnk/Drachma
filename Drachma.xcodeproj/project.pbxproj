@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E308BEDD2678723B0014E0C0 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E308BEDC2678723B0014E0C0 /* NetworkingManager.swift */; };
+		E308BEE026790AB80014E0C0 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E308BEDF26790AB80014E0C0 /* CoinImageView.swift */; };
+		E308BEE226790C590014E0C0 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E308BEE126790C590014E0C0 /* CoinImageService.swift */; };
+		E308BEE426790DAF0014E0C0 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E308BEE326790DAF0014E0C0 /* CoinImageViewModel.swift */; };
 		E3590FCD2673170B00BB61E8 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FCC2673170B00BB61E8 /* Double.swift */; };
 		E3590FCF2673AF5800BB61E8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FCE2673AF5800BB61E8 /* HomeViewModel.swift */; };
 		E3590FD22673BA7F00BB61E8 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FD12673BA7F00BB61E8 /* CoinDataService.swift */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		E308BEDC2678723B0014E0C0 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		E308BEDF26790AB80014E0C0 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		E308BEE126790C590014E0C0 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
+		E308BEE326790DAF0014E0C0 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 		E3590FCC2673170B00BB61E8 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E3590FCE2673AF5800BB61E8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E3590FD12673BA7F00BB61E8 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
@@ -63,10 +69,20 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		E308BEDE26790AA90014E0C0 /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				E308BEDF26790AB80014E0C0 /* CoinImageView.swift */,
+				E308BEE326790DAF0014E0C0 /* CoinImageViewModel.swift */,
+			);
+			path = CoinImage;
+			sourceTree = "<group>";
+		};
 		E3590FD02673BA4E00BB61E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				E3590FD12673BA7F00BB61E8 /* CoinDataService.swift */,
+				E308BEE126790C590014E0C0 /* CoinImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -160,6 +176,7 @@
 		E3A64C602671E26D000A89D9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E308BEDE26790AA90014E0C0 /* CoinImage */,
 				E3A64C612671E282000A89D9 /* CircleButton */,
 			);
 			path = Components;
@@ -256,10 +273,13 @@
 				E3590FCF2673AF5800BB61E8 /* HomeViewModel.swift in Sources */,
 				E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */,
 				E3A64C5F2671E18F000A89D9 /* HomeView.swift in Sources */,
+				E308BEE026790AB80014E0C0 /* CoinImageView.swift in Sources */,
 				E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */,
+				E308BEE226790C590014E0C0 /* CoinImageService.swift in Sources */,
 				E3A64C632671E28E000A89D9 /* CircleButtonView.swift in Sources */,
 				E3A64C592671DEDE000A89D9 /* Color.swift in Sources */,
 				E308BEDD2678723B0014E0C0 /* NetworkingManager.swift in Sources */,
+				E308BEE426790DAF0014E0C0 /* CoinImageViewModel.swift in Sources */,
 				E3A64C652671E565000A89D9 /* CircleButtonAnimationView.swift in Sources */,
 				E35FC4572672741600F9E92B /* PreviewProvider.swift in Sources */,
 				E3590FCD2673170B00BB61E8 /* Double.swift in Sources */,
