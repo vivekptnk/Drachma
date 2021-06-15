@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E308BEDD2678723B0014E0C0 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E308BEDC2678723B0014E0C0 /* NetworkingManager.swift */; };
 		E3590FCD2673170B00BB61E8 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FCC2673170B00BB61E8 /* Double.swift */; };
 		E3590FCF2673AF5800BB61E8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FCE2673AF5800BB61E8 /* HomeViewModel.swift */; };
 		E3590FD22673BA7F00BB61E8 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3590FD12673BA7F00BB61E8 /* CoinDataService.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E308BEDC2678723B0014E0C0 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		E3590FCC2673170B00BB61E8 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E3590FCE2673AF5800BB61E8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E3590FD12673BA7F00BB61E8 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E308BEDB2678721D0014E0C0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E308BEDC2678723B0014E0C0 /* NetworkingManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E3590FD02673BA4E00BB61E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +90,7 @@
 		E3A64C472671DC1C000A89D9 /* Drachma */ = {
 			isa = PBXGroup;
 			children = (
+				E308BEDB2678721D0014E0C0 /* Utilities */,
 				E3590FD02673BA4E00BB61E8 /* Services */,
 				E3A64C572671DECE000A89D9 /* Extensions */,
 				E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */,
@@ -248,6 +259,7 @@
 				E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */,
 				E3A64C632671E28E000A89D9 /* CircleButtonView.swift in Sources */,
 				E3A64C592671DEDE000A89D9 /* Color.swift in Sources */,
+				E308BEDD2678723B0014E0C0 /* NetworkingManager.swift in Sources */,
 				E3A64C652671E565000A89D9 /* CircleButtonAnimationView.swift in Sources */,
 				E35FC4572672741600F9E92B /* PreviewProvider.swift in Sources */,
 				E3590FCD2673170B00BB61E8 /* Double.swift in Sources */,
