@@ -20,6 +20,7 @@ class CoinImageService {
     }
     
     private func getCoinImage() {
+        print("Dowloading Image now")
         guard let url = URL(string: coin.image) else {return}
         
         imageSubscription =
