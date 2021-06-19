@@ -8,6 +8,14 @@
 import Foundation
 import Combine
 class HomeViewModel : ObservableObject {
+    
+    @Published var statistics : [Statistic] = [
+        Statistic(title: "Title", value: "value", percentageChange: 1),
+        Statistic(title: "Title", value: "value" ),
+        Statistic(title: "Title", value: "value"),
+        Statistic(title: "Title", value: "value", percentageChange: 7)
+    ]
+    
     @Published var allCoins: [Coin] = []
     @Published var portfolioCoins: [Coin] = []
     @Published var searchText : String = ""
