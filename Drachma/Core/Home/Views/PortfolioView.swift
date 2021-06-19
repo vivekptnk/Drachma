@@ -34,6 +34,11 @@ struct PortfolioView: View {
                     trailingNavBarButton
                 }
             })
+            .onChange(of: vm.searchText, perform: { value in
+                if value == "" {
+                    removeSelectedCoin()
+                }
+            })
         }
         
     }
@@ -123,7 +128,7 @@ extension PortfolioView {
                 Text("Save".uppercased())
             })
             .opacity(
-                (selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText)) ? 1.0:0.0
+                (selectedCoin != nil && selectedCoin?.currentHoldings != Double(quantityText)) ? 1.0 : 0.0
             )
             
         }

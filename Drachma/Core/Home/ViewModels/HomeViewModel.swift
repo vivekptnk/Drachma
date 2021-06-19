@@ -9,14 +9,14 @@ import Foundation
 import Combine
 class HomeViewModel : ObservableObject {
     
-    @Published var statistics : [Statistic] = [
-    ]
+    @Published var statistics : [Statistic] = []
     
     @Published var allCoins: [Coin] = []
     @Published var portfolioCoins: [Coin] = []
     @Published var searchText : String = ""
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
+    
     private var cancellables = Set<AnyCancellable>()
     init(){
         addSubscribers()
