@@ -12,7 +12,7 @@ class PortfolioDataService {
     
     private let container : NSPersistentContainer
     private let containerName : String = "PortfolioContainer"
-    private let entityName : String = "PortfolioEnitity"
+    private let entityName : String = "PortfolioEntity"
     
     @Published var savedEntities : [PortfolioEntity] = []
     
