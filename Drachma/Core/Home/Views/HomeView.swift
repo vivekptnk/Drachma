@@ -11,13 +11,18 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var showPortfolio : Bool = false
+    @State private var showPortfolio : Bool = false // animate right
+    @State private var showPortfolioView : Bool = false // show sheet
     @EnvironmentObject private var vm : HomeViewModel
     var body: some View {
         ZStack{
             //background layer
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showPortfolioView, content: {
+                    PortfolioView()
+                        .environmentObject(vm)
+                })
             
             //content layer
             VStack{
@@ -52,7 +57,7 @@ struct HomeView_Previews: PreviewProvider {
             NavigationView{
                 HomeView()
                     .navigationBarHidden(true)
-                                    .colorScheme(.dark)
+                                    .colorScheme(.light)
             }
             .environmentObject(dev.homeVM)
         }
@@ -67,6 +72,11 @@ extension HomeView {
         HStack{
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none)
+                .onTapGesture {
+                    if showPortfolio {
+                        showPortfolioView.toggle()
+                    }
+                }
                 .background(CircleButtonAnimationView(animate: $showPortfolio))
             Spacer()
             Text(showPortfolio ? "Portfolio":"Live Prices")
