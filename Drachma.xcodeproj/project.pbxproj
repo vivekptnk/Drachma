@@ -29,6 +29,7 @@
 		E37428BF267E886C004D59B1 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E37428BD267E886C004D59B1 /* PortfolioContainer.xcdatamodeld */; };
 		E37428C1267E8906004D59B1 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37428C0267E8906004D59B1 /* PortfolioDataService.swift */; };
 		E37428C3267EAA88004D59B1 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37428C2267EAA88004D59B1 /* HapticManager.swift */; };
+		E38073C0267FCE160063B06D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38073BF267FCE160063B06D /* DetailView.swift */; };
 		E395DEA7267D85EB00878D3B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395DEA6267D85EB00878D3B /* SearchBarView.swift */; };
 		E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */; };
 		E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C4A2671DC1C000A89D9 /* ContentView.swift */; };
@@ -64,6 +65,7 @@
 		E37428BE267E886C004D59B1 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 		E37428C0267E8906004D59B1 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		E37428C2267EAA88004D59B1 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		E38073BF267FCE160063B06D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E395DEA6267D85EB00878D3B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		E3A64C452671DC1C000A89D9 /* Drachma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drachma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrachmaApp.swift; sourceTree = "<group>"; };
@@ -118,6 +120,30 @@
 				E37428C0267E8906004D59B1 /* PortfolioDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E38073BC267FCDE10063B06D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E38073BE267FCDFE0063B06D /* ViewModels */,
+				E38073BD267FCDFA0063B06D /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E38073BD267FCDFA0063B06D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E38073BF267FCE160063B06D /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E38073BE267FCDFE0063B06D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E3A64C3C2671DC1C000A89D9 = {
@@ -175,6 +201,7 @@
 		E3A64C5A2671E169000A89D9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E38073BC267FCDE10063B06D /* Detail */,
 				E3A64C602671E26D000A89D9 /* Components */,
 				E3A64C5B2671E172000A89D9 /* Home */,
 			);
@@ -326,6 +353,7 @@
 				E354063D267DAC22005ADC0E /* UIApplication.swift in Sources */,
 				E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */,
 				E3A64C632671E28E000A89D9 /* CircleButtonView.swift in Sources */,
+				E38073C0267FCE160063B06D /* DetailView.swift in Sources */,
 				E37428C3267EAA88004D59B1 /* HapticManager.swift in Sources */,
 				E395DEA7267D85EB00878D3B /* SearchBarView.swift in Sources */,
 				E3A64C592671DEDE000A89D9 /* Color.swift in Sources */,

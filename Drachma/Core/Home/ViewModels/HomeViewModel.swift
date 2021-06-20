@@ -14,10 +14,18 @@ class HomeViewModel : ObservableObject {
     @Published var allCoins: [Coin] = []
     @Published var portfolioCoins: [Coin] = []
     @Published var searchText : String = ""
+    @Published var sortOptions : sortOption = .holdings
+    
     private let coinDataService = CoinDataService()
     private let marketDataService = MarketDataService()
     private let portfolioDataService = PortfolioDataService()
     private var cancellables = Set<AnyCancellable>()
+    
+    enum sortOption {
+        case rank, rankReversed, holdings, holdingsReversed, price, priceReversed
+        
+    }
+    
     init(){
         addSubscribers()
     }
@@ -31,9 +39,9 @@ class HomeViewModel : ObservableObject {
         //
         // function upates allcoins
         $searchText
-            .combineLatest(coinDataService.$allCoins)
+            .combineLatest(coinDataService.$allCoins, $sortOptions)
             .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
-            .map(filterCoins)
+            .map(filterAndSortCoins)
             .sink { [weak self] (returnedCoins) in
                 self?.allCoins = returnedCoins
             }
@@ -44,7 +52,8 @@ class HomeViewModel : ObservableObject {
             .combineLatest(portfolioDataService.$savedEntities)
             .map(mapAllCoinsToPortfolioCoins)
             .sink {[weak self] (returnedCoins) in
-                self?.portfolioCoins = returnedCoins
+                guard let self = self else {return}
+                self.portfolioCoins = self.sortPortfolioCoinsIfNeeded(coins: returnedCoins)
             }
             .store(in: &cancellables)
         
@@ -71,6 +80,40 @@ class HomeViewModel : ObservableObject {
         HapticManager.notification(type: .success)
     }
     
+    private func filterAndSortCoins(text : String, coins : [Coin], sort : sortOption) -> [Coin] {
+        var updatedCoins = filterCoins(text: text, coins: coins)
+        sortCoins(sort: sort, coins: &updatedCoins)
+        return updatedCoins
+    }
+    
+    private func sortCoins(sort: sortOption, coins : inout [Coin]) {
+        switch sort {
+        case .rank, .holdings:
+            
+            coins.sort(by: {$0.rank < $1.rank}) // shorter and condensed
+        //            return coins.sorted { coin1, coin2 in
+        //                return coin1.rank < coin2.rank
+        //            }
+        case .rankReversed, .holdingsReversed:
+            coins.sort(by: {$0.rank > $1.rank})
+        case .price:
+            coins.sort(by: {$0.currentPrice > $1.currentPrice})
+        case .priceReversed:
+            coins.sort(by: {$0.currentPrice < $1.currentPrice})
+        }
+    }
+    
+    private func sortPortfolioCoinsIfNeeded(coins : [Coin]) -> [Coin] {
+        // sort my holdings or rev holdings if needed
+        switch sortOptions {
+        case .holdings:
+            return coins.sorted(by: {$0.currentHoldings! > $1.currentHoldings! })
+        case .holdingsReversed :
+            return coins.sorted(by: {$0.currentHoldings! < $1.currentHoldings! })
+        default:
+            return coins
+        }
+    }
     
     private func filterCoins(text : String, coins : [Coin]) -> [Coin]{
         guard !text.isEmpty else {
@@ -87,12 +130,12 @@ class HomeViewModel : ObservableObject {
     private func mapAllCoinsToPortfolioCoins(allCoins: [Coin], portfolioEntities : [PortfolioEntity]) -> [Coin]{
         allCoins
             .compactMap { (coin) -> Coin? in
-            guard let entity = portfolioEntities.first(where: {$0.coinID == coin.id}) else {
-                return nil
+                guard let entity = portfolioEntities.first(where: {$0.coinID == coin.id}) else {
+                    return nil
+                }
+                return coin.updateHoldings(amount: entity.amount)
+                
             }
-            return coin.updateHoldings(amount: entity.amount)
-            
-        }
     }
     
     
@@ -119,7 +162,7 @@ class HomeViewModel : ObservableObject {
                 let percentChange = coin.priceChangePercentage24H! / 100    // 25% -> 25
                 let previousValue = (currentValue / (1 + percentChange))
                 return previousValue
-           // 110 / (1 + 0.1) = 100
+                // 110 / (1 + 0.1) = 100
             }
             .reduce(0, +)
         

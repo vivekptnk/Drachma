@@ -30,9 +30,9 @@ struct HomeView: View {
                 HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 columnTitles
-                .font(.caption)
-                .foregroundColor(Color.theme.secondaryText)
-                .padding(.horizontal )
+                    .font(.caption)
+                    .foregroundColor(Color.theme.secondaryText)
+                    .padding(.horizontal )
                 
                 if !showPortfolio {
                     allCoinsList
@@ -57,7 +57,7 @@ struct HomeView_Previews: PreviewProvider {
             NavigationView{
                 HomeView()
                     .navigationBarHidden(true)
-                                    .colorScheme(.light)
+                    .colorScheme(.light)
             }
             .environmentObject(dev.homeVM)
         }
@@ -99,11 +99,18 @@ extension HomeView {
     private var allCoinsList: some View {
         List{
             ForEach(vm.allCoins){ coin in
-                CoinRowView(coin: coin, showHoldingsColumn: false )
+                NavigationLink(
+                    destination: DetailView(coin: coin),
+                    label: {
+                        CoinRowView(coin: coin, showHoldingsColumn: false )
+                            .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    })
+                
+                
             }
         }
         .listStyle(PlainListStyle())
-        .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+        
         
     }
     
@@ -119,13 +126,53 @@ extension HomeView {
     
     private var columnTitles : some View {
         HStack{
-            Text("Coin")
+            HStack(spacing: 4) {
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .opacity((vm.sortOptions == .rank || vm.sortOptions == .rankReversed) ? 1.0: 0.0)
+                    .rotationEffect(Angle(degrees: (vm.sortOptions == .rank) ? 0 : 180))
+            }
+            .onTapGesture {
+                //                if vm.sortOptions == .rank {
+                //                    vm.sortOptions = .rankReversed
+                //                } else {
+                //                    vm.sortOptions = .rank
+                //                }
+                withAnimation(.default){
+                    vm.sortOptions = vm.sortOptions == .rank ? .rankReversed : .rank // shorter
+                }
+            }
+            
+            
             Spacer()
             if showPortfolio{
-                Text("Holdings")
+                HStack(spacing: 4) {
+                    Text("Holdings")
+                        .frame(width: UIScreen.main.bounds.width/3.5, alignment: .trailing)
+                    Image(systemName: "chevron.down")
+                        .opacity((vm.sortOptions == .holdings || vm.sortOptions == .holdingsReversed) ? 1.0: 0.0)
+                        .rotationEffect(Angle(degrees: (vm.sortOptions == .holdings) ? 0 : 180))
+                }
+                .onTapGesture {
+                    withAnimation(.default){
+                        vm.sortOptions = vm.sortOptions == .holdings ? .holdingsReversed : .holdings // shorter
+                    }
+                }
+                
             }
-            Text("Price")
-                .frame(width: UIScreen.main.bounds.width/3.5, alignment: .trailing)
+            HStack(spacing: 4) {
+                Text("Price")
+                    .frame(width: UIScreen.main.bounds.width/3.5, alignment: .trailing)
+                Image(systemName: "chevron.down")
+                    .opacity((vm.sortOptions == .price || vm.sortOptions == .priceReversed) ? 1.0: 0.0)
+                    .rotationEffect(Angle(degrees: (vm.sortOptions == .price) ? 0 : 180))
+            }
+            .onTapGesture {
+                withAnimation(.default){
+                    vm.sortOptions = vm.sortOptions == .price ? .priceReversed : .price // shorter
+                }
+            }
+            
             Button(action: {
                 withAnimation(.linear(duration: 2.0)){
                     vm.reloadData()
