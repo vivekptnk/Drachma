@@ -88,11 +88,19 @@ extension HomeView {
                 }
                 .background(CircleButtonAnimationView(animate: $showPortfolio))
             Spacer()
-            Text(showPortfolio ? "Portfolio":"Live Prices")
-                .font(.headline)
-                .fontWeight(.heavy)
-                .foregroundColor(Color.theme.accent)
-                .animation(.none)
+            VStack(spacing: 5) {
+                Text("DRACHMA")
+                    .font(.headline)
+                    .fontWeight(.black)
+                    .foregroundColor(Color.theme.titleColor)
+                    .tracking(3)
+
+                Text(showPortfolio ? "Portfolio":"Live Prices")
+                    .font(.headline)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color.theme.accent)
+                    .animation(.none)
+            }
             Spacer()
             CircleButtonView(iconName: "chevron.right")
                 .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))

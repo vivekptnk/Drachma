@@ -15,7 +15,7 @@ class DetailViewModel : ObservableObject {
     
     @Published var overviewStatistic : [Statistic] = []
     @Published var additionalStatistic : [Statistic] = []
-    
+    @Published var coinDescription : String? = nil
     
     init(coin : Coin) {
         self.coin = coin

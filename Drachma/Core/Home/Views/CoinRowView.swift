@@ -63,19 +63,27 @@ extension CoinRowView {
             Text((coin.currentHoldings ?? 0).asNumberString())
         }
         .foregroundColor(Color.theme.accent)
+//        .offset(x: -10)
     }
     
     private var rightColumn : some View {
-        VStack(alignment: .trailing){
-            Text(coin.currentPrice.asCurrencyWith6Decimals())
-                .bold()
+        HStack {
+            VStack(alignment: .trailing){
+                Text(coin.currentPrice.asCurrencyWith6Decimals())
+                    .bold()
+                    .foregroundColor(Color.theme.accent)
+                Text(coin.priceChangePercentage24H?.asPercentString() ?? "")
+                    .foregroundColor(
+                        (coin.priceChangePercentage24H ?? 0) >= 0 ?
+                            Color.theme.green :
+                            Color.theme.red )
+            }
+            .frame(width: UIScreen.main.bounds.width/3.5, alignment: .trailing)
+            
+            Image(systemName: "chevron.forward")
+                .font(.headline)
                 .foregroundColor(Color.theme.accent)
-            Text(coin.priceChangePercentage24H?.asPercentString() ?? "")
-                .foregroundColor(
-                    (coin.priceChangePercentage24H ?? 0) >= 0 ?
-                        Color.theme.green :
-                        Color.theme.red )
         }
-        .frame(width: UIScreen.main.bounds.width/3.5, alignment: .trailing)
+//        .offset(x: -20)
     }
 }
