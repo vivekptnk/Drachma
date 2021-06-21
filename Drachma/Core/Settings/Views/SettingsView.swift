@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    let personalURL = URL(string: "https://viwoke.dev")!
+    let personalURL = URL(string: "https://www.viwoke.dev")!
     let githubURL = URL(string: "https://www.github.com/vivekptnk")!
     let coffeeURL = URL(string: "https://www.buymeacoffee.com/viwoke")!
     let coinGeckoURL = URL(string: "https://www.coingecko.com/en")!
@@ -34,8 +34,12 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
-            .preferredColorScheme(.light)
+        Group {
+            SettingsView()
+                .preferredColorScheme(.light)
+            SettingsView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
 
@@ -46,7 +50,7 @@ extension SettingsView {
             HStack(alignment: .center, spacing: 10) {
                 Image("logo")
                     .resizable()
-                    .background(Color.theme.accent)
+                    .background(Color.black)
                     .frame(width: 80, height: 80)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .padding(.vertical)

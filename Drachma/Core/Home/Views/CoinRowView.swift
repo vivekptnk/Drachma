@@ -81,9 +81,8 @@ extension CoinRowView {
             .frame(width: UIScreen.main.bounds.width/3.5, alignment: .trailing)
             
             Image(systemName: "chevron.right.square.fill")
-                .font(.headline)
                 .foregroundColor(Color.theme.titleColor)
+                .padding(.all, 0)
         }
-//        .offset(x: -20)
     }
 }
