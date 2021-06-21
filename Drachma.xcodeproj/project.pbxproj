@@ -34,6 +34,7 @@
 		E38073C4267FE3860063B06D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38073C3267FE3860063B06D /* DetailViewModel.swift */; };
 		E38073C6267FE3B90063B06D /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38073C5267FE3B90063B06D /* CoinDetailDataService.swift */; };
 		E388A36426802ED50088847E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388A36326802ED50088847E /* String.swift */; };
+		E388A36826803BA40088847E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388A36726803BA40088847E /* SettingsView.swift */; };
 		E395DEA7267D85EB00878D3B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395DEA6267D85EB00878D3B /* SearchBarView.swift */; };
 		E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */; };
 		E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C4A2671DC1C000A89D9 /* ContentView.swift */; };
@@ -76,6 +77,7 @@
 		E38073C3267FE3860063B06D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E38073C5267FE3B90063B06D /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		E388A36326802ED50088847E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		E388A36726803BA40088847E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E395DEA6267D85EB00878D3B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		E3A64C452671DC1C000A89D9 /* Drachma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drachma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrachmaApp.swift; sourceTree = "<group>"; };
@@ -135,6 +137,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		E37A7252268052270067C3EA /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				E37A72532680522F0067C3EA /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		E37A72532680522F0067C3EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E38073BC267FCDE10063B06D /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +176,22 @@
 				E38073C3267FE3860063B06D /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E388A36526803B7B0088847E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E388A36626803B900088847E /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E388A36626803B900088847E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E388A36726803BA40088847E /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E3A64C3C2671DC1C000A89D9 = {
@@ -218,9 +251,11 @@
 		E3A64C5A2671E169000A89D9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E38073BC267FCDE10063B06D /* Detail */,
-				E3A64C602671E26D000A89D9 /* Components */,
 				E3A64C5B2671E172000A89D9 /* Home */,
+				E38073BC267FCDE10063B06D /* Detail */,
+				E388A36526803B7B0088847E /* Settings */,
+				E3A64C602671E26D000A89D9 /* Components */,
+				E37A7252268052270067C3EA /* Launch */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -392,6 +427,7 @@
 				E38073C6267FE3B90063B06D /* CoinDetailDataService.swift in Sources */,
 				E38073C4267FE3860063B06D /* DetailViewModel.swift in Sources */,
 				E37428C1267E8906004D59B1 /* PortfolioDataService.swift in Sources */,
+				E388A36826803BA40088847E /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Vivek-Pattanaik.Drachma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -554,7 +590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Vivek-Pattanaik.Drachma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

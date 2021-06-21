@@ -12,7 +12,7 @@ struct ChartView: View {
     private let data : [Double]
     private let maxY : Double
     private let minY : Double
-    private let lineColor : Color
+    let lineColor : Color
     private let startingDate : Date
     private let endingDate : Date
     @State private var percentage: CGFloat = 0
