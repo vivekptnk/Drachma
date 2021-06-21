@@ -43,11 +43,15 @@ extension SettingsView {
     private var personalSection : some View {
         
         Section(header: Text("Drachma")) {
-            VStack(alignment: .leading, spacing: 10) {
-                Image(systemName: "applelogo")
+            HStack(alignment: .center, spacing: 10) {
+                Image("logo")
                     .resizable()
-                    .frame(width: 100, height: 100)
+                    .background(Color.theme.accent)
+                    .frame(width: 80, height: 80)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(.vertical)
+                Divider()
+                    .padding()
                 Text("This app was a personal project by Vivek. It uses MVVM Architecture, Combine, and CoreData!")
                     .font(.callout)
                     .fontWeight(.medium)
@@ -77,14 +81,16 @@ extension SettingsView {
     }
     
     private var developerSection : some View {
-        Section(header: Text("CoinGecko")) {
-            VStack(alignment: .leading) {
-                Image("coinGeckoImage")
+        Section(header: Text("Developer")) {
+            VStack(alignment: .center, spacing: 10) {
+                Image("vivekpic")
                     .resizable()
                     .scaledToFit()
                     .frame(height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
-                Text("This project is made by Vivek Pattanaik, it uses SwiftUI ❤️ and is written 100% in Swift ❤️. This project is heavily optimized because of the use of multi-threading, publishers/subscribers, and data persistence. If you liked this project and want to reach out to me, vist my website and shoot me an email.")
+                Divider()
+                    .padding()
+                Text("This project is made by Vivek Pattanaik, it uses SwiftUI ❤️ and is written 100% in Swift ❤️. This project is heavily optimized because of the use of multi-threading, publishers/subscribers, and data persistence. \n\n If you liked this project and want to reach out to me, visit my website and shoot me an email.")
                     .font(.callout)
                     .fontWeight(.medium)
                     .foregroundColor(Color.theme.accent)
