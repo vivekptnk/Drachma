@@ -33,6 +33,7 @@
 		E38073C2267FE16E0063B06D /* CoinDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38073C1267FE16E0063B06D /* CoinDetailModel.swift */; };
 		E38073C4267FE3860063B06D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38073C3267FE3860063B06D /* DetailViewModel.swift */; };
 		E38073C6267FE3B90063B06D /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38073C5267FE3B90063B06D /* CoinDetailDataService.swift */; };
+		E388A36426802ED50088847E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388A36326802ED50088847E /* String.swift */; };
 		E395DEA7267D85EB00878D3B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395DEA6267D85EB00878D3B /* SearchBarView.swift */; };
 		E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */; };
 		E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C4A2671DC1C000A89D9 /* ContentView.swift */; };
@@ -74,6 +75,7 @@
 		E38073C1267FE16E0063B06D /* CoinDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailModel.swift; sourceTree = "<group>"; };
 		E38073C3267FE3860063B06D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E38073C5267FE3B90063B06D /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
+		E388A36326802ED50088847E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E395DEA6267D85EB00878D3B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		E3A64C452671DC1C000A89D9 /* Drachma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drachma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrachmaApp.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				E3590FCC2673170B00BB61E8 /* Double.swift */,
 				E354063C267DAC22005ADC0E /* UIApplication.swift */,
 				E3E6834F26801FE000297669 /* Date.swift */,
+				E388A36326802ED50088847E /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				E3540649267E382E005ADC0E /* MarketDataService.swift in Sources */,
 				E308BEDD2678723B0014E0C0 /* NetworkingManager.swift in Sources */,
 				E308BEE426790DAF0014E0C0 /* CoinImageViewModel.swift in Sources */,
+				E388A36426802ED50088847E /* String.swift in Sources */,
 				E3A64C652671E565000A89D9 /* CircleButtonAnimationView.swift in Sources */,
 				E354064B267E449B005ADC0E /* PortfolioView.swift in Sources */,
 				E35FC4572672741600F9E92B /* PreviewProvider.swift in Sources */,

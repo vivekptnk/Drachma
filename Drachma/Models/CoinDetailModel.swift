@@ -109,6 +109,10 @@ struct CoinDetailModel : Codable {
         case description
         case links
     }
+    
+    var readableDescription : String? {
+        description?.en?.removingHTMLOccurences
+    }
 }
 
 struct Links : Codable{

@@ -10,12 +10,14 @@ import Combine
 
 class DetailViewModel : ObservableObject {
     @Published var coin : Coin
-    private let coinDetailService : CoinDetailDataService
+    private var coinDetailService : CoinDetailDataService
     private var cancellables = Set<AnyCancellable>()
     
     @Published var overviewStatistic : [Statistic] = []
     @Published var additionalStatistic : [Statistic] = []
     @Published var coinDescription : String? = nil
+    @Published var websiteURL : String? = nil
+    @Published var redditURL : String? = nil
     
     init(coin : Coin) {
         self.coin = coin
@@ -28,7 +30,7 @@ class DetailViewModel : ObservableObject {
     private func addSubscribers(){
         coinDetailService.$coinDetails
             .combineLatest($coin)
-            .map(mapCoinDetailsAndModelsToStatisticModel)
+            .map(mapDetailToStatistics)
             .sink { [weak self] (returnedArrays) in
 
                 self?.overviewStatistic = returnedArrays.overview
@@ -36,6 +38,13 @@ class DetailViewModel : ObservableObject {
             }
             .store(in: &cancellables)
         
+        coinDetailService.$coinDetails
+            .sink {[weak self] (returnedCoinDetails) in
+                self?.coinDescription = returnedCoinDetails?.readableDescription
+                self?.websiteURL = returnedCoinDetails?.links?.homepage?.first
+                self?.redditURL = returnedCoinDetails?.links?.subredditURL
+            }
+            .store(in: &cancellables)
     }
     
     private func createOverviewArray(coinModel : Coin) -> [Statistic] {
@@ -92,7 +101,7 @@ class DetailViewModel : ObservableObject {
         return additionalArray
     }
     
-    private func mapCoinDetailsAndModelsToStatisticModel(coinDetailModel : CoinDetailModel?, coinModel : Coin) -> (overview: [Statistic], additional : [Statistic]) {
+    private func mapDetailToStatistics(coinDetailModel : CoinDetailModel?, coinModel : Coin) -> (overview: [Statistic], additional : [Statistic]) {
         
         let overviewArray = createOverviewArray(coinModel: coinModel)
         let additionalArray = createAdditionalArray(coinDetailModel: coinDetailModel, coinModel: coinModel)
