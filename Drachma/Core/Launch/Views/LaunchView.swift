@@ -81,12 +81,12 @@ extension LaunchView {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 7.4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.4) {
             withAnimation(){
                 showDrachma.toggle()
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 8.5) {
             withAnimation(){
                 showLaunchView = false
             }
