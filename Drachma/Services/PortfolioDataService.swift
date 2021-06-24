@@ -38,16 +38,8 @@ class PortfolioDataService {
         } else {
             add(coin: coin, amount: amount)
         }
-        
-        // Longer version
-//        if let entity = savedEntities.first(where: { (savedEntity) in
-//            return savedEntity.coinID == coin.id
-//        }) {
-//
-//        }
-        
-        
     }
+    
     
     
     // MARK: PRIVATE

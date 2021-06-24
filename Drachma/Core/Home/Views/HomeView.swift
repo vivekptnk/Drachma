@@ -158,9 +158,6 @@ extension HomeView {
                         segue(coin: coin)
                     }
             }
-            .onDelete(perform: { indexSet in
-                vm.portfolioCoins.remove(atOffsets: indexSet)
-            })
         }
         .listStyle(PlainListStyle())
         .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))

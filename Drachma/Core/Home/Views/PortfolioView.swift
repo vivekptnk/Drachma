@@ -10,7 +10,7 @@ import SwiftUI
 struct PortfolioView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var selectedCoin : Coin? = nil
-    @State private var quantityText : String = ""
+    @State private var quantityText : String = "0"
     @State private var showCheckMark : Bool = false
     var body: some View {
         NavigationView {

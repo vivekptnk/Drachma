@@ -39,7 +39,6 @@
 		E388A36826803BA40088847E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E388A36726803BA40088847E /* SettingsView.swift */; };
 		E395DEA7267D85EB00878D3B /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395DEA6267D85EB00878D3B /* SearchBarView.swift */; };
 		E3A64C492671DC1C000A89D9 /* DrachmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */; };
-		E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C4A2671DC1C000A89D9 /* ContentView.swift */; };
 		E3A64C4D2671DC1D000A89D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A64C4C2671DC1D000A89D9 /* Assets.xcassets */; };
 		E3A64C502671DC1D000A89D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A64C4F2671DC1D000A89D9 /* Preview Assets.xcassets */; };
 		E3A64C592671DEDE000A89D9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A64C582671DEDE000A89D9 /* Color.swift */; };
@@ -85,7 +84,6 @@
 		E395DEA6267D85EB00878D3B /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		E3A64C452671DC1C000A89D9 /* Drachma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drachma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A64C482671DC1C000A89D9 /* DrachmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrachmaApp.swift; sourceTree = "<group>"; };
-		E3A64C4A2671DC1C000A89D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3A64C4C2671DC1D000A89D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3A64C4F2671DC1D000A89D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3A64C512671DC1D000A89D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				E3A64C572671DECE000A89D9 /* Extensions */,
 				E3A64C662671E81D000A89D9 /* Models */,
 				E3A64C5A2671E169000A89D9 /* Core */,
-				E3A64C4A2671DC1C000A89D9 /* ContentView.swift */,
 				E3A64C4C2671DC1D000A89D9 /* Assets.xcassets */,
 				E3A64C512671DC1D000A89D9 /* Info.plist */,
 				E3A64C4E2671DC1D000A89D9 /* Preview Content */,
@@ -405,7 +402,6 @@
 				E354064D267E4683005ADC0E /* XMarkButton.swift in Sources */,
 				E3590FCF2673AF5800BB61E8 /* HomeViewModel.swift in Sources */,
 				E3E6835026801FE000297669 /* Date.swift in Sources */,
-				E3A64C4B2671DC1C000A89D9 /* ContentView.swift in Sources */,
 				E308BEE626793B000014E0C0 /* LocalFileManager.swift in Sources */,
 				E3540647267E35C6005ADC0E /* MarketDataModel.swift in Sources */,
 				E3A64C5F2671E18F000A89D9 /* HomeView.swift in Sources */,
